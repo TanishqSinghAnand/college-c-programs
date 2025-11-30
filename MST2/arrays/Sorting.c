@@ -67,15 +67,15 @@ void insertionSort(int a[], int n)
 {
     for (int i = 1; i < n; i++)
     {
-        int key = a[i];
-        int j = i - 1;
+        int curr = a[i];
+        int prev = i - 1;
 
-        while (j >= 0 && a[j] > key)
+        while (prev >= 0 && a[prev] > curr)
         {
-            a[j + 1] = a[j];
+            a[prev + 1] = a[prev];
             j--;
         }
-        a[j + 1] = key;
+        a[prev + 1] = curr;
     }
     printf("\nArray after Insertion Sort:\n");
     printArray(a, n);
